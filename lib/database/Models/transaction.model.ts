@@ -1,16 +1,4 @@
-import { Document, Schema, model, models } from "mongoose";
-
-export interface ITransaction extends Document {
-  createdAt: Date;
-  stripeId: string;
-  amount: number;
-  plan?: string;
-  credits?: Number;
-  buyer: {
-    _id: string;
-    userName: string;
-  };
-}
+import { Schema, model, models } from "mongoose";
 
 const TransactionSchema = new Schema({
   createdAt: {
@@ -38,7 +26,6 @@ const TransactionSchema = new Schema({
   },
 });
 
-const Transaction =
-  models?.Transaction || model("Transaction", TransactionSchema);
+const Transaction = models?.Transaction || model("Transaction", TransactionSchema);
 
 export default Transaction;
