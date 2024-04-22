@@ -3,7 +3,7 @@
 import Stripe from "stripe";
 import { handleError } from "../utils";
 import { connectToDatabase } from "../database/mongoose";
-import Transaction from "../database/models/transaction.model";
+import Transaction from "../database/Models/transaction.model";
 import { updateCredits } from "./user.actions";
 import { redirect } from "next/navigation";
 

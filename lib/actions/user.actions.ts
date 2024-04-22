@@ -1,6 +1,6 @@
 "use server";
 
-import User from "../database/models/user.model";
+import User from "../database/Models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 import { revalidatePath } from "next/cache";
